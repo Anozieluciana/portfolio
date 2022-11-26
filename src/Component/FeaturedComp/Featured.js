@@ -21,8 +21,8 @@ function Featured() {
                     <HoldPic1></HoldPic1>
                 </Holder>
                 <Hold>
-                    <Des>Ecommerce Housing</Des>
-                   <a href='https://ecommercehousing.web.app/'> <But>See More</But></a>
+                    <Des>Smart</Des>
+                   <a href='https://smart-dev.netlify.app/?fbclid=IwAR1JzSPHgyVpf1WKq0XO2tGWHlb2wjukedCGdFcSOaZ_wHj_PFyy1FczBYQ'> <But>See More</But></a>
                 </Hold>
             </Box1>
             <Box1>
@@ -30,8 +30,8 @@ function Featured() {
                     <HoldPic3></HoldPic3>
                 </Holder>
                 <Hold>
-                    <Des>Lucia Todo.App</Des>
-                   <a href='https://luciatodoapp.web.app/'> <But>See More</But></a>
+                    <Des>Crytoclone Template</Des>
+                   <a href='https://cryto-landingpage.netlify.app/'> <But>See More</But></a>
                 </Hold>
             </Box1>
         </Wrap>
@@ -51,13 +51,18 @@ width: 130px;
 font-size: 14px;
 color: white;
 border-radius: 5px;
+text-decoration: none;
 display: flex;
 justify-content: center;
 align-items: center;
 background-color:  #C71B27;
 :hover{
-    background: white;
+    background: #FFB465;
     color: black;
+}
+a{
+    text-decoration: none;
+    color:inherit;
 }
 @media screen and (max-width: 430px){
     width: 150px;
@@ -86,7 +91,7 @@ const HoldPic= styled.div`
 const HoldPic3= styled.div`
     height: 80%;
     width: 90%;
-    background-image: url('./todo.png');
+    background-image: url('./cryptoclone.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -95,7 +100,7 @@ const HoldPic3= styled.div`
 const HoldPic1= styled.div`
     height: 80%;
     width: 90%;
-    background-image: url('./home.png');
+    background-image: url('./smart.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -107,6 +112,10 @@ display: flex;
 justify-content: space-between;
 align-items: center;
 margin-top: 20px;
+
+a{
+    text-decoration: none;
+}
 
 @media screen and (max-width: 430px){
   flex-direction: column;
@@ -126,7 +135,7 @@ border-radius: 5px;
 box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 
 @media screen and (max-width: 768px){
-    width: 80%;
+    width: 100%;
     margin-top: 10px;
     height: auto;
     padding-bottom: 30px;

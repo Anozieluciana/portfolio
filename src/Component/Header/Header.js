@@ -2,6 +2,7 @@ import React,{useState} from 'react'
 import styled from 'styled-components'
 import {GoThreeBars} from "react-icons/go"
 import {GiCancel} from "react-icons/gi"
+import {animateScroll as Scroll, Link} from "react-scroll"
 
 
  const Header = () => {
@@ -9,25 +10,18 @@ import {GiCancel} from "react-icons/gi"
 
     const Toggle  = () =>{
         setChange(!change)
+
     }
-
-
-
   return (
     <div>
-        <Con>
+        <Con>   
             <Wrap>
-         
-              <Logo src='./images.png'/>
-          
+             <Link to='/'><Logo src='./logooo.png'/></Link> 
                 <Navs onClick={Toggle} change={change}>
                     <Nav to='/'>Home</Nav>
-                    <Nav to='/about'>About</Nav>
-                    <Nav to='/schedule'>Services</Nav>
-                    <a href='tel:+2348121759954'>
-                   <button>Contact Us</button>
-               
-                   </a>
+                    <Nav to='/about2'>About</Nav>
+                    <Nav to='service' duration={1000} smooth={true} offset={-100}>Services</Nav>
+                    <Button to='contact' duration={1000} smooth={true} offset={-100}>Contact Me</Button>
                 </Navs>  
                 <MobileHold onClick={Toggle}>
                     {change ? (<GoThreeBars/>) : ( <GiCancel/>)}    
@@ -55,7 +49,7 @@ const Con  = styled.div`
 `
 
 const Wrap = styled.div`
-    width:60%;
+    width:75%;
     height:90%;
     display:flex;
     justify-content:space-between;
@@ -63,8 +57,8 @@ const Wrap = styled.div`
   
 `
 const Logo = styled.img`
-        height:100px;
-        width:100px;
+        height:120px;
+        width:120px;
         object-fit: contain;
         cursor: pointer;
 `
@@ -91,7 +85,7 @@ const Navs = styled.div`
     font-family: poppins;
     border-radius: 5px;
     border: 2px solid black;
-    color: black;
+    background-color: #FFB465;
     cursor: pointer;
     @media screen and (max-width: 530px){
         width: 120px;
@@ -125,7 +119,7 @@ img{
     flex-direction:column;
     position: absolute;
     height: 80vh;
-    width: 50%;
+    width: 100%;
     top: 95px;
     justify-content:space-evenly;
     left: ${({change})=> (change? '-100%' : 0)};
@@ -138,7 +132,28 @@ img{
  
 `
 
-const Nav = styled.div`
+const Button = styled(Link)`
+  width:130px;
+    height:45px;
+    border:none;
+    color:white;
+    font-size:15px;
+    font-weight:500;
+    font-family: poppins;
+    border-radius: 5px;
+    border: 2px solid black;
+    background-color: #FFB465;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @media screen and (max-width: 530px){
+        width: 120px;
+    }
+`
+
+const Nav = styled(Link)`
         font-size:15px;
         font-weight:600;
         color: #fff;

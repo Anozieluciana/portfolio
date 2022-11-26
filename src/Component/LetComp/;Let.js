@@ -1,21 +1,104 @@
 import React from 'react'
 import styled from 'styled-components'
+import {BiPhoneCall} from 'react-icons/bi'
+import {AiOutlineWhatsApp} from 'react-icons/ai'
+
 
 function Let() {
   return (
-   <Con>
+   <Con id='contact'>
     <Wrap>
         <Box1>
             <H1>Let's work together on your next project</H1>
             <P>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</P>
+         
         </Box1>
-        <Box2><a href='tel +08121759954'><But>Contact Me</But></a></Box2>
+        <Box2><Links> <label>Let's Talk</label>
+              <div><a href='tel: +23481759954'><BiPhoneCall size={"35px"}/>Call</a></div>
+              <span><a href='https://wa.me/message/7W255T4W5UCNL1'><AiOutlineWhatsApp size={"35px"} />Chat</a></span>
+              </Links></Box2>
     </Wrap>
    </Con>
   )
 }
 
 export default Let
+const Links = styled.div`
+width: 150px;
+height: 70px;
+background: transparent;
+border-radius: 50px;
+display: flex;
+justify-content: space-around;
+align-items: center;
+box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+border: 3px solid #C71B27;
+color: #F6F6F6;
+margin-top: 20px;
+div{
+    display: none;
+};
+span{
+    display: none;
+};
+:hover{
+    width: 200px;
+    transition: all 950ms;
+    cursor: pointer;
+    border: 0;
+    background: transparent;
+    // box-shadow: none;
+    div{
+        display: block;
+        width: 80px;
+        height: 60px;
+        border-radius: 50px;
+        // background: #40557A;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        border: 3px solid #C71B27;
+        padding:5px; 
+        a{
+            text-decoration: none;
+            color: white;
+        };
+        :hover{
+            transform:  scale(1.09);
+        }
+    };
+    span{
+        display: block;
+        width: 80px;
+        height: 60px;
+        border-radius: 50px;
+        // background: #40557A;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        border: 3px solid #C71B27;
+        padding:5px;
+        a{
+            text-decoration: none;
+            color: white;
+        };
+        :hover{
+            transform:  scale(1.09);
+            transition: all 950ms;
+        }
+    };
+    label{
+        display: none;
+    }
+}
+`
+
+
+
 const H1 = styled.div`
 font-size: 35px;
 font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
